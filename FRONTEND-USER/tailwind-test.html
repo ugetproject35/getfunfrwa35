@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ffe665',
+                        secondary: '#d29729',
+                        dark: '#121212',
+                        cardBg: '#252525'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <div class="min-h-screen">
+        <div class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-4xl font-bold text-center py-8">
+            Tailwind Test
+        </div>
+        
+        <div class="p-6">
+            <div class="max-w-md mx-auto bg-cardBg border border-secondary rounded-lg p-6">
+                <h2 class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-xl font-bold mb-4 text-center">
+                    Test Card
+                </h2>
+                
+                <div class="mb-4">
+                    <label class="block text-gray-400 mb-2 text-sm">Test Input:</label>
+                    <input 
+                        class="w-full p-3 bg-gray-800 border border-gray-600 rounded text-white" 
+                        placeholder="Enter something..."
+                    />
+                </div>
+                
+                <button class="w-full p-3 bg-gradient-to-r from-primary to-secondary text-black font-semibold rounded hover:opacity-90 transition">
+                    Test Button
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
