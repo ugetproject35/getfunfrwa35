@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { buyNode, claimNode } from '../sdk.js';
 
 const NodePage = () => {
-  const [nodeCnt, setNodeCnt] = useState(1);
+  const [nodeCount, setNodeCount] = useState(1);
   
   return (
     <div className="min-h-screen bg-black text-white pb-20">
@@ -22,14 +22,14 @@ const NodePage = () => {
                 type="number"
                 min="1"
                 step="1"
-                value={nodeCnt}
-                onChange={e => setNodeCnt(Number(e.target.value))}
+                value={nodeCount}
+                onChange={e => setNodeCount(Number(e.target.value))}
                 className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#404040] rounded-lg text-white focus:outline-none focus:border-[#ffe665] transition-colors"
               />
             </div>
             <div className="flex gap-2">
               <button 
-                onClick={() => buyNode(nodeCnt)}
+                onClick={() => buyNode(nodeCount)}
                 className="flex-1 px-6 py-3 bg-gradient-to-r from-[#ffe665] to-[#d29729] text-black font-semibold rounded-lg hover:opacity-90 transition-opacity"
               >
                 購買

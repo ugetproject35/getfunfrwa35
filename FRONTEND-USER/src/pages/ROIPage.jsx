@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { claimROI } from '../sdk.js';
 
 const ROIPage = () => {
-  const [roiAmt, setRoiAmt] = useState(1);
+  const [roiAmount, setRoiAmount] = useState(1);
   
   return (
     <div className="min-h-screen bg-black text-white pb-20">
@@ -22,13 +22,13 @@ const ROIPage = () => {
                 type="number"
                 min="1"
                 step="1"
-                value={roiAmt}
-                onChange={e => setRoiAmt(Number(e.target.value))}
+                value={roiAmount}
+                onChange={e => setRoiAmount(Number(e.target.value))}
                 className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#404040] rounded-lg text-white focus:outline-none focus:border-[#ffe665] transition-colors"
               />
             </div>
             <button 
-              onClick={() => claimROI(roiAmt)}
+              onClick={() => claimROI(roiAmount)}
               className="w-full px-6 py-3 bg-gradient-to-r from-[#ffe665] to-[#d29729] text-black font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
               領取

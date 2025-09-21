@@ -3,7 +3,7 @@ import { deposit } from '../sdk.js';
 
 const PurchasePage = () => {
   const [ref, setRef] = useState(() => new URLSearchParams(location.search).get('ref') || '');
-  const [dep, setDep] = useState(10);
+  const [depositAmount, setDepositAmount] = useState(10);
 
   return (
     <div className="min-h-screen bg-black text-white pb-20">
@@ -16,59 +16,6 @@ const PurchasePage = () => {
           最小投資 10 USDT（10 的倍數）；推薦人地址必填
         </div>
 
-        {/* Investment Plans */}
-        {/* <div className="space-y-6 mb-8"> */}
-          {/* Basic Plan */}
-          {/* <div className="rounded-xl border-[1px] border-[#d29729] p-6 bg-gradient-to-b from-[#252525] to-[#252525]">
-            <div className="flex justify-between items-center mb-4">
-              <div className="bg-gradient-to-r from-[#ffe665] to-[#d29729] bg-clip-text text-lg font-bold text-transparent">
-                Basic Plan
-              </div>
-              <div className="text-[#ffe665] font-bold">10 USDT</div>
-            </div>
-            <div className="space-y-2 text-sm text-gray-300">
-              <div>• Daily ROI: 1%</div>
-              <div>• Duration: 200 days</div>
-              <div>• Total Return: 200%</div>
-              <div>• Minimum: 10 USDT</div>
-            </div>
-          </div> */}
-
-          {/* Premium Plan */}
-          {/* <div className="rounded-xl border-[1px] border-[#d29729] p-6 bg-gradient-to-b from-[#252525] to-[#252525] relative">
-            <div className="absolute -top-2 left-4 bg-gradient-to-r from-[#ffe665] to-[#d29729] text-black px-3 py-1 rounded-full text-xs font-bold">
-              POPULAR
-            </div>
-            <div className="flex justify-between items-center mb-4">
-              <div className="bg-gradient-to-r from-[#ffe665] to-[#d29729] bg-clip-text text-lg font-bold text-transparent">
-                Premium Plan
-              </div>
-              <div className="text-[#ffe665] font-bold">100 USDT</div>
-            </div>
-            <div className="space-y-2 text-sm text-gray-300">
-              <div>• Daily ROI: 1.2%</div>
-              <div>• Duration: 200 days</div>
-              <div>• Total Return: 240%</div>
-              <div>• Bonus: +20% extra returns</div>
-            </div>
-          </div> */}
-
-          {/* VIP Plan */}
-          {/* <div className="rounded-xl border-[1px] border-[#d29729] p-6 bg-gradient-to-b from-[#252525] to-[#252525]">
-            <div className="flex justify-between items-center mb-4">
-              <div className="bg-gradient-to-r from-[#ffe665] to-[#d29729] bg-clip-text text-lg font-bold text-transparent">
-                VIP Plan
-              </div>
-              <div className="text-[#ffe665] font-bold">1000 USDT</div>
-            </div>
-            <div className="space-y-2 text-sm text-gray-300">
-              <div>• Daily ROI: 1.5%</div>
-              <div>• Duration: 200 days</div>
-              <div>• Total Return: 300%</div>
-              <div>• VIP Benefits: Priority support</div>
-            </div>
-          </div> */}
-        {/* </div> */}
 
         {/* Investment Form */}
         <div className="mx-auto flex min-h-[300px] w-full max-w-md flex-col rounded-xl border-[1px] border-[#d29729] p-6 bg-gradient-to-b from-[#252525] to-[#252525]">
@@ -93,8 +40,8 @@ const PurchasePage = () => {
                 type="number"
                 min="10"
                 step="10"
-                value={dep}
-                onChange={e => setDep(Number(e.target.value))}
+                value={depositAmount}
+                onChange={e => setDepositAmount(Number(e.target.value))}
                 className="w-full px-4 py-3 bg-[#1a1a1a] border border-[#404040] rounded-lg text-white focus:outline-none focus:border-[#ffe665] transition-colors"
               />
             </div>
@@ -104,7 +51,7 @@ const PurchasePage = () => {
               {[10, 50, 100, 500].map(amount => (
                 <button
                   key={amount}
-                  onClick={() => setDep(amount)}
+                  onClick={() => setDepositAmount(amount)}
                   className="px-3 py-2 border border-[#404040] rounded-lg text-white text-sm hover:border-[#ffe665] transition-colors"
                 >
                   {amount}
@@ -113,7 +60,7 @@ const PurchasePage = () => {
             </div>
 
             <button 
-              onClick={() => deposit(dep, ref)}
+              onClick={() => deposit(depositAmount, ref)}
               className="w-full px-6 py-3 bg-gradient-to-r from-[#ffe665] to-[#d29729] text-black font-semibold rounded-lg hover:opacity-90 transition-opacity mt-4"
             >
               確認投資

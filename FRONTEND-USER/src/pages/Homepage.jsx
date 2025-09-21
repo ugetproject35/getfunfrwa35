@@ -94,25 +94,6 @@ const Homepage = () => {
           </div>
         </div>
 
-        {/* Stats Section */}
-        {/* <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6">
-          <div className="flex flex-col items-center p-4 lg:p-6 rounded-lg border border-[#404040] bg-gradient-to-b from-[#252525] to-[#252525] hover:shadow-lg hover:shadow-[#d29729]/10 transition-all duration-300">
-            <div className="text-xl lg:text-2xl font-bold text-[#ffe665] mb-1">100+</div>
-            <div className="text-xs lg:text-sm text-[#aba7a7] text-center">Active Users</div>
-          </div>
-          <div className="flex flex-col items-center p-4 lg:p-6 rounded-lg border border-[#404040] bg-gradient-to-b from-[#252525] to-[#252525] hover:shadow-lg hover:shadow-[#d29729]/10 transition-all duration-300">
-            <div className="text-xl lg:text-2xl font-bold text-[#ffe665] mb-1">1000+</div>
-            <div className="text-xs lg:text-sm text-[#aba7a7] text-center">USDT Volume</div>
-          </div>
-          <div className="flex flex-col items-center p-4 lg:p-6 rounded-lg border border-[#404040] bg-gradient-to-b from-[#252525] to-[#252525] hover:shadow-lg hover:shadow-[#d29729]/10 transition-all duration-300">
-            <div className="text-xl lg:text-2xl font-bold text-[#ffe665] mb-1">24/7</div>
-            <div className="text-xs lg:text-sm text-[#aba7a7] text-center">Support</div>
-          </div>
-          <div className="flex flex-col items-center p-4 lg:p-6 rounded-lg border border-[#404040] bg-gradient-to-b from-[#252525] to-[#252525] hover:shadow-lg hover:shadow-[#d29729]/10 transition-all duration-300">
-            <div className="text-xl lg:text-2xl font-bold text-[#ffe665] mb-1">99.9%</div>
-            <div className="text-xs lg:text-sm text-[#aba7a7] text-center">Uptime</div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
